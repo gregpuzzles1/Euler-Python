@@ -12,8 +12,8 @@ for n in range(2, 1000001):
 
     if counter > largest:
         largest = counter
-        print "largest = ", largest
-        print "starting number = ", number
+print "largest = ", largest
+#print "starting number = ", number
 
 
 
