@@ -1,0 +1,4 @@
+After doing a bit of research on this problem, it seems as though a simple Combinations formula will 
+provide the answer. We know that any path will have 40 moves (20 right + 20 down), so for C(n,r) - n 
+will equal 40 and r (the number of right moves) will equal 20 - C(40,20). Then we just plug the numbers into the 
+formula - the ! means 'factorial' which is imported from the math class in python.

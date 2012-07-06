@@ -1,32 +1,19 @@
+# Python version = 2.7.2
+# Platform = win32
+# Elapsed Time: 20.9999084473 millisecs
 
-# 40!/[20!20!]
-def permutations(iterable, r=None):
-    # permutations('ABCD', 2) --> AB AC AD BA BC BD CA CB CD DA DB DC
-    # permutations(range(3)) --> 012 021 102 120 201 210
-    pool = tuple(iterable)
-    n = len(pool)
-    r = n if r is None else r
-    if r > n:
-        return
-    indices = range(n)
-    cycles = range(n, n-r, -1)
-    yield tuple(pool[i] for i in indices[:r])
-    while n:
-        for i in reversed(range(r)):
-            cycles[i] -= 1
-            if cycles[i] == 0:
-                indices[i:] = indices[i+1:] + indices[i:i+1]
-                cycles[i] = n - i
-            else:
-                j = cycles[i]
-                indices[i], indices[-j] = indices[-j], indices[i]
-                yield tuple(pool[i] for i in indices[:r])
-                break
-        else:
-            return
+from math import factorial
+import time
 
-x = permutations(range(3))
+def main():
+    """Main Program"""
+    start_time = time.time()
 
-for i in x:
-    print "x= ", i
+    n = 40      # The total number of moves for any one path (right + down)
+    r = 20      # The total number of right moves for any one path
 
+    print factorial(n) / (factorial(r) * factorial(n - r))
+    print "Elapsed Time:", (time.time() - start_time) * 1000, "millisecs"
+
+if __name__ == '__main__':
+    main()
