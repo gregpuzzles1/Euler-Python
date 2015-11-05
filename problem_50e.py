@@ -1,11 +1,11 @@
 # Python version = 2.7.1
 # Platform = win32
 
-import gmpy
+import gmpy2
 
 def isprime(n):
     """Return True of False - Prime number"""
-    if gmpy.is_prime(n):
+    if gmpy2.is_prime(n):
         return True
     else:
         return False

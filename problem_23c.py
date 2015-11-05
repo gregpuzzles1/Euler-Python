@@ -1,5 +1,7 @@
+import time
+
 def factor(number):
-    """Factor a numer"""
+    """Factor a number"""
     L = []
     for i in range(1, ((number / 2) + 1)):
         if number % i == 0:
@@ -49,16 +51,15 @@ def find_missing_abundant_sums(yz, zz):
 
 def main():
     """Main program"""
+    start_time = time.clock()
     xy = find_abundant_Set()
-    #print "abundant_Set = ", xy
     yz = find_abundant_sums(xy)
-    #print "abundant_Set_a = ", yz
     zz = set_of_all_integers()
-    #print "all_integers = ", zz
     xz = find_missing_abundant_sums(yz, zz)
-    #print "all_positive_int = ", xz
     tally = sum(xz)
     print "Tally = ", tally
+    run_time = time.clock() - start_time
+    print "Run time = ", run_time
             
 if __name__ == '__main__':
     main()
