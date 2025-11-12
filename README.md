@@ -11,8 +11,8 @@ You can learn more or try the problems yourself by visiting the [Project Euler w
 ## About This Repository
 
 - The scripts in this repository are my solutions to a number of Project Euler problems.
-- Most scripts are written in Python.
-- Over time, I have been refactoring these solutions to ensure compatibility with Python 3.11 or greater.
+- The scripts are written in Python.
+- These solutions need to be refactored to ensure compatibility with Python 3.11 or greater.
 - Each script may contain a brief description or problem statement at the top.
 
 ## Contributing
